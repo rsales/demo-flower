@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="list-section">
-    <h1 class="text-4xl font-bold text-center w-full mb-10">{{ blok.title }}</h1>
+    <h1 class="text-4xl font-bold text-center w-full mb-10 text-black">{{ blok.title }}</h1>
     <div class="list-skill grid gap-6 grid-cols-12">
       <component
         v-for="blok in blok.items"
@@ -27,6 +27,7 @@ export default {
 
 <style lang="postcss">
 .list-section {
-  @apply py-16 ;
+  @apply mt-16;
+  @apply mb-28;
 }
 </style>
