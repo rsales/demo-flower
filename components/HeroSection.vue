@@ -1,10 +1,11 @@
 <template>
-  <header 
-    class="hero-section grid gap-4 grid-cols-12 py-10 h-96 text-white relative"
+  <header
+    v-editable="blok" 
+    class="hero-section grid gap-6 grid-cols-12 py-10 h-96 text-white relative content-end"
     :style="`background-image: url('${blok.background_image}'); background-repeat: no-repeat; background-size: cover; background-position: center;`"
   >
     <div class="content-header col-span-5 pl-5 z-10">
-      <h1 class="text-5xl">{{ blok.title }}</h1>
+      <h1 class="text-5xl mb-2 font-black">{{ blok.title }}</h1>
       <p class="text-base">{{ blok.description }}</p>
     </div>
     <div class="filter w-full h-full absolute z-0" />
@@ -13,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'HeroSection',
   props: {
     blok: {
       type: Object,
