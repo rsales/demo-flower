@@ -28,6 +28,6 @@ export default {
 <style lang="postcss">
 .list-section {
   @apply mt-16;
-  @apply mb-28;
+  @apply mb-24;
 }
 </style>

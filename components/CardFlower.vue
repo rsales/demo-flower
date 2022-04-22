@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="card-flower cursor-pointer">
+  <div v-editable="blok" class="card-flower cursor-pointer mb-5">
     <img :src="blok.image" class="w-full">
     <div class="title-card flex py-2">
       <h1 class="text-lg font-bold flex-auto text-black">{{ blok.title }}</h1>
