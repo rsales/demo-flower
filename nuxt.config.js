@@ -5,7 +5,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '🌷 Demo Flowers',
+    title: 'Demo Flowers',
     htmlAttrs: {
       lang: 'en',
     },
