@@ -43,6 +43,7 @@ export default {
     // In real world project you should ask for correct version of the content
     // according to the environment you are deploying to.
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    const release = context.query._storyblok_release
 
     const fullSlug =
       context.route.path == '/' || context.route.path == ''
@@ -53,6 +54,7 @@ export default {
     return context.app.$storyapi
       .get(`cdn/stories/${fullSlug}`, {
         version: version,
+        from_release: release,
       })
       .then((res) => {
         return res.data
