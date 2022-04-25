@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'AboutPage',
   data() {
     return {
       story: { content: {} },
