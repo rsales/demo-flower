@@ -48,7 +48,7 @@ export default {
     const fullSlug =
       context.route.path == '/' || context.route.path == ''
         ? 'home'
-        : (context.route.path).split('/').pop()
+        : (context.route.path).split('/').filter(item => item).pop()
 
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi
