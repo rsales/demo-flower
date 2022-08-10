@@ -55,7 +55,7 @@ export default {
       .get(`cdn/stories/${fullSlug}`, {
         version: version,
         from_release: release,
-        language: 'pt-br',
+        language: 'de',
       })
       .then((res) => {
         return res.data
