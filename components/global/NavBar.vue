@@ -5,7 +5,12 @@
 </template>
 
 <script>
+import DemoLogo from '../DemoLogo.vue'
+
 export default {
   name: 'NavBar',
+  components: {
+    DemoLogo
+  },
 };
 </script>

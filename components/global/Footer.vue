@@ -8,7 +8,12 @@
 </template>
 
 <script>
+import FooterFlower from '../FooterFlower.vue'
+
 export default {
   name: 'Footer',
+  components: {
+    FooterFlower
+  },
 };
 </script>

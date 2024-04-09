@@ -39,13 +39,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    [
-      'storyblok-nuxt',
-      {
-        accessToken: process.env.ACCESS_TOKEN_SB,
-        cacheProvider: 'memory'
-      }
-    ]
+    ["@storyblok/nuxt-2/module", { accessToken: process.env.ACCESS_TOKEN_SB, cacheProvider: 'memory' }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -55,5 +49,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, { isDev, isClient }) {
+      config.resolve.alias["vue"] = "vue/dist/vue.common";
+    }
+  }
 }

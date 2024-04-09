@@ -14,6 +14,9 @@
 </template>
 
 <script>
+import NavBar from './global/NavBar.vue'
+import Footer from './global/Footer.vue'
+
 export default {
   name: 'Page',
   props: {
@@ -21,6 +24,10 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  components: {
+    NavBar,
+    Footer
   },
 }
 </script>
