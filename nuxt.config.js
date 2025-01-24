@@ -39,6 +39,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-shopify',
     ["@storyblok/nuxt-2/module", { accessToken: process.env.ACCESS_TOKEN_SB, cacheProvider: 'memory' }],
   ],
 
@@ -46,6 +47,11 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+  },
+
+  shopify: {
+    domain: process.env.SHOPIFY_STOREFRONT_HOST,
+    storefrontAccessToken: process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
